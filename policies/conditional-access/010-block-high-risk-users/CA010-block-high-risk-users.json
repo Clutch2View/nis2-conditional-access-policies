@@ -1,0 +1,31 @@
+{
+    "displayName": "CA010: Block High-Risk Users",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "userRiskLevels": [
+            "high"
+        ],
+        "clientAppTypes": [
+            "all"
+        ]
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "block"
+        ]
+    }
+}
