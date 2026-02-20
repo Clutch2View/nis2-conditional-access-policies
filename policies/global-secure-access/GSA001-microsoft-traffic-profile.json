@@ -1,0 +1,34 @@
+{
+    "displayName": "GSA001: Microsoft Traffic Profile",
+    "description": "Routes Microsoft 365 traffic through Global Secure Access for optimized connectivity and security inspection.",
+    "state": "enabled",
+    "trafficType": "microsoft365",
+    "profile": {
+        "name": "Microsoft 365 access profile",
+        "trafficForwardingType": "m365",
+        "policies": [
+            {
+                "name": "Exchange Online",
+                "enabled": true,
+                "trafficType": "exchangeOnline"
+            },
+            {
+                "name": "SharePoint Online and OneDrive",
+                "enabled": true,
+                "trafficType": "sharePointOnlineAndOneDrive"
+            },
+            {
+                "name": "Microsoft Teams (and Skype for Business)",
+                "enabled": true,
+                "trafficType": "microsoftTeams"
+            }
+        ]
+    },
+    "linkedConditionalAccessPolicies": [
+        "CA020"
+    ],
+    "nis2Mapping": {
+        "article": "Article 21(2)(e)",
+        "description": "Security in network and information systems acquisition"
+    }
+}
