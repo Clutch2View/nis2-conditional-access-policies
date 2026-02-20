@@ -1,0 +1,28 @@
+{
+    "displayName": "NL001: Corporate Offices",
+    "locationType": "ipNamedLocation",
+    "isTrusted": true,
+    "ipRanges": [
+        {
+            "description": "US Headquarters",
+            "cidrAddress": "203.0.113.0/24"
+        },
+        {
+            "description": "EMEA Office - London",
+            "cidrAddress": "198.51.100.0/24"
+        },
+        {
+            "description": "EMEA Office - Frankfurt",
+            "cidrAddress": "192.0.2.0/24"
+        },
+        {
+            "description": "APAC Office - Singapore",
+            "cidrAddress": "198.51.100.128/25"
+        },
+        {
+            "description": "APAC Office - Tokyo",
+            "cidrAddress": "203.0.113.128/25"
+        }
+    ],
+    "note": "Replace all placeholder IP ranges with actual corporate office egress IP addresses. These use RFC 5737 documentation ranges as placeholders."
+}
