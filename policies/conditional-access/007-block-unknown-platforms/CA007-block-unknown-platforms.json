@@ -1,0 +1,40 @@
+{
+    "displayName": "CA007: Block Access from Unknown/Unsupported Platforms",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "platforms": {
+            "includePlatforms": [
+                "all"
+            ],
+            "excludePlatforms": [
+                "android",
+                "iOS",
+                "windows",
+                "macOS",
+                "linux"
+            ]
+        },
+        "clientAppTypes": [
+            "all"
+        ]
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "block"
+        ]
+    }
+}
