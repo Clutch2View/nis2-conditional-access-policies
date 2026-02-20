@@ -1,0 +1,35 @@
+{
+    "displayName": "CA004: Require Compliant Device \u2014 Windows & macOS",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "platforms": {
+            "includePlatforms": [
+                "windows",
+                "macOS"
+            ]
+        },
+        "clientAppTypes": [
+            "browser",
+            "mobileAppsAndDesktopClients"
+        ]
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "compliantDevice"
+        ]
+    }
+}
