@@ -1,0 +1,49 @@
+{
+    "displayName": "GSA003: Internet Access Profile",
+    "description": "Routes internet traffic through Global Secure Access for web content filtering, threat protection, and DLP.",
+    "state": "enabled",
+    "trafficType": "internet",
+    "profile": {
+        "name": "Internet access profile",
+        "trafficForwardingType": "internet",
+        "securityProfile": {
+            "name": "Default Internet Security Profile",
+            "webContentFilteringPolicies": [
+                {
+                    "name": "Block High Risk Categories",
+                    "action": "block",
+                    "categories": [
+                        "malware",
+                        "phishing",
+                        "botnets",
+                        "cryptomining",
+                        "gambling",
+                        "adultContent",
+                        "highBandwidthStreaming"
+                    ]
+                },
+                {
+                    "name": "Allow Business Categories",
+                    "action": "allow",
+                    "categories": [
+                        "businessAndEnterprise",
+                        "cloudServices",
+                        "webmail",
+                        "socialNetworking"
+                    ]
+                }
+            ],
+            "tlsInspection": {
+                "enabled": true,
+                "excludedDomains": [
+                    "*.banking.com",
+                    "*.healthcare.gov"
+                ]
+            }
+        }
+    },
+    "nis2Mapping": {
+        "article": "Article 21(2)(e)",
+        "description": "Security in network and information systems - internet traffic inspection and filtering"
+    }
+}
