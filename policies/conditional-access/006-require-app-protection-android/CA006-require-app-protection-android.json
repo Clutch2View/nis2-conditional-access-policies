@@ -1,0 +1,35 @@
+{
+    "displayName": "CA006: Require App Protection Policy \u2014 Android",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "platforms": {
+            "includePlatforms": [
+                "android"
+            ]
+        },
+        "clientAppTypes": [
+            "browser",
+            "mobileAppsAndDesktopClients"
+        ]
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "approvedApplication",
+            "compliantApplication"
+        ]
+    }
+}
