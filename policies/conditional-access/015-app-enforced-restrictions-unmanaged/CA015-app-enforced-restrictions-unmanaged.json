@@ -1,0 +1,33 @@
+{
+    "displayName": "CA015: App-Enforced Restrictions \u2014 Unmanaged Devices",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "Office365"
+            ]
+        },
+        "clientAppTypes": [
+            "browser"
+        ],
+        "devices": {
+            "deviceFilter": {
+                "mode": "include",
+                "rule": "device.isCompliant -ne True -and device.trustType -ne \"ServerAD\""
+            }
+        }
+    },
+    "sessionControls": {
+        "applicationEnforcedRestrictions": {
+            "isEnabled": true
+        }
+    }
+}
