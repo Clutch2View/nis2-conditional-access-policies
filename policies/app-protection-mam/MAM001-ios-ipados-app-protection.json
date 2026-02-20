@@ -1,0 +1,81 @@
+{
+    "displayName": "MAM001: iOS/iPadOS App Protection Policy",
+    "description": "Comprehensive app protection policy for iOS and iPadOS devices. Enforces data protection, access requirements, and conditional launch settings for managed apps.",
+    "platform": "iOS",
+    "assignments": {
+        "includeGroups": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ],
+        "excludeGroups": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ]
+    },
+    "apps": {
+        "managedApps": [
+            "com.microsoft.outlooklite",
+            "com.microsoft.Office.Outlook",
+            "com.microsoft.teams",
+            "com.microsoft.sharepoint",
+            "com.microsoft.skydrive",
+            "com.microsoft.onenote",
+            "com.microsoft.Office.Word",
+            "com.microsoft.Office.Excel",
+            "com.microsoft.Office.Powerpoint",
+            "com.microsoft.msedge",
+            "com.microsoft.to-do"
+        ]
+    },
+    "dataProtection": {
+        "preventBackups": true,
+        "sendOrgDataToOtherApps": "managedApps",
+        "receiveDataFromOtherApps": "managedApps",
+        "restrictCutCopyPaste": "managedApps",
+        "allowSaveAs": false,
+        "saveAsLocations": {
+            "oneDriveForBusiness": true,
+            "sharePoint": true,
+            "localStorage": false,
+            "photoLibrary": false
+        },
+        "encryptOrgData": true,
+        "syncContactsToNativeApp": false,
+        "printOrgData": false,
+        "restrictWebContentToManagedBrowser": true,
+        "orgDataNotifications": "blockOrgData"
+    },
+    "accessRequirements": {
+        "pinRequired": true,
+        "pinType": "numeric",
+        "minimumPinLength": 6,
+        "simplePinBlocked": true,
+        "biometricAuth": true,
+        "pinResetAfterDays": 90,
+        "appPinRequired": true,
+        "managedBrowserRequired": true,
+        "workAccountCredentials": "required"
+    },
+    "conditionalLaunch": {
+        "maxPinAttempts": {
+            "value": 5,
+            "action": "resetPin"
+        },
+        "offlineGracePeriod": {
+            "value": 720,
+            "action": "wipeData"
+        },
+        "minOsVersion": {
+            "value": "16.0",
+            "action": "block"
+        },
+        "jailbrokenDevices": {
+            "action": "wipeData"
+        },
+        "disabledAccount": {
+            "action": "block"
+        },
+        "minAppVersion": {
+            "value": "latest-2",
+            "action": "warn"
+        }
+    }
+}
