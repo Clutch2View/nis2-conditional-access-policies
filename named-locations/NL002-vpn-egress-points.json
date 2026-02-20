@@ -1,0 +1,24 @@
+{
+    "displayName": "NL002: VPN Egress Points",
+    "locationType": "ipNamedLocation",
+    "isTrusted": true,
+    "ipRanges": [
+        {
+            "description": "VPN Concentrator - US East",
+            "cidrAddress": "203.0.113.10/32"
+        },
+        {
+            "description": "VPN Concentrator - US West",
+            "cidrAddress": "203.0.113.20/32"
+        },
+        {
+            "description": "VPN Concentrator - EMEA",
+            "cidrAddress": "198.51.100.10/32"
+        },
+        {
+            "description": "VPN Concentrator - APAC",
+            "cidrAddress": "192.0.2.10/32"
+        }
+    ],
+    "note": "Replace all placeholder IPs with actual VPN concentrator egress IPs. Mark as trusted to reduce false positives in Identity Protection."
+}
