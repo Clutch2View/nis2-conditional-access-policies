@@ -1,0 +1,48 @@
+{
+    "displayName": "GSA002: Private Access Profile",
+    "description": "Provides secure access to on-premises and private applications through Global Secure Access, replacing traditional VPN.",
+    "state": "enabled",
+    "trafficType": "private",
+    "profile": {
+        "name": "Private access profile",
+        "trafficForwardingType": "private",
+        "appSegments": [
+            {
+                "name": "Intranet Applications",
+                "destinationType": "fqdn",
+                "destinations": [
+                    "intranet.contoso.com",
+                    "erp.contoso.com",
+                    "hr.contoso.com"
+                ],
+                "ports": [
+                    "443",
+                    "80"
+                ],
+                "protocol": "tcp"
+            },
+            {
+                "name": "File Servers",
+                "destinationType": "ipRange",
+                "destinations": [
+                    "10.0.0.0/8"
+                ],
+                "ports": [
+                    "445",
+                    "443"
+                ],
+                "protocol": "tcp"
+            }
+        ],
+        "connectorGroups": [
+            {
+                "name": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                "region": "Auto"
+            }
+        ]
+    },
+    "nis2Mapping": {
+        "article": "Article 21(2)(e)",
+        "description": "Security in network and information systems - replaces VPN with Zero Trust network access"
+    }
+}
