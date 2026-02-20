@@ -1,0 +1,45 @@
+{
+    "displayName": "MAM003: Windows App Protection Policy (Edge Browser)",
+    "description": "App protection policy for Microsoft Edge on Windows. Protects corporate data accessed via browser on unmanaged Windows devices.",
+    "platform": "Windows",
+    "assignments": {
+        "includeGroups": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ],
+        "excludeGroups": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ]
+    },
+    "apps": {
+        "managedApps": [
+            "Microsoft Edge"
+        ]
+    },
+    "dataProtection": {
+        "sendOrgDataToOtherApps": "none",
+        "receiveDataFromOtherApps": "none",
+        "restrictCutCopyPaste": "blocked",
+        "printOrgData": false,
+        "encryptOrgData": true
+    },
+    "accessRequirements": {
+        "windowsHelloRequired": false,
+        "pinRequired": false,
+        "offlineGracePeriod": 720
+    },
+    "conditionalLaunch": {
+        "offlineGracePeriod": {
+            "value": 720,
+            "action": "block"
+        },
+        "disabledAccount": {
+            "action": "block"
+        }
+    },
+    "healthChecks": {
+        "minOsVersion": {
+            "value": "10.0.19041",
+            "action": "block"
+        }
+    }
+}
