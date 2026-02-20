@@ -1,0 +1,36 @@
+{
+    "displayName": "CA016: Sign-In Frequency \u2014 12-Hour Session Limit",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "clientAppTypes": [
+            "browser",
+            "mobileAppsAndDesktopClients"
+        ]
+    },
+    "sessionControls": {
+        "signInFrequency": {
+            "value": 12,
+            "type": "hours",
+            "isEnabled": true,
+            "authenticationType": "primaryAndSecondaryAuthentication",
+            "frequencyInterval": "timeBased"
+        },
+        "persistentBrowser": {
+            "mode": "never",
+            "isEnabled": true
+        }
+    }
+}
