@@ -1,0 +1,20 @@
+{
+    "displayName": "NL004: Trusted IPv6 Ranges",
+    "locationType": "ipNamedLocation",
+    "isTrusted": true,
+    "ipRanges": [
+        {
+            "description": "US Headquarters IPv6",
+            "cidrAddress": "2001:db8:1::/48"
+        },
+        {
+            "description": "EMEA Office IPv6",
+            "cidrAddress": "2001:db8:2::/48"
+        },
+        {
+            "description": "APAC Office IPv6",
+            "cidrAddress": "2001:db8:3::/48"
+        }
+    ],
+    "note": "Replace all placeholder IPv6 ranges with actual corporate IPv6 address ranges. These use RFC 3849 documentation ranges as placeholders. Important for dual-stack networks where IPv6 may be the primary egress."
+}
