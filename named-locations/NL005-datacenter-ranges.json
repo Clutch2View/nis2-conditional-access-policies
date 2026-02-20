@@ -1,0 +1,24 @@
+{
+    "displayName": "NL005: Datacenter Ranges",
+    "locationType": "ipNamedLocation",
+    "isTrusted": true,
+    "ipRanges": [
+        {
+            "description": "Primary Datacenter - US East",
+            "cidrAddress": "203.0.113.64/28"
+        },
+        {
+            "description": "DR Datacenter - US West",
+            "cidrAddress": "203.0.113.80/28"
+        },
+        {
+            "description": "Entra Connect Server",
+            "cidrAddress": "203.0.113.100/32"
+        },
+        {
+            "description": "ADFS Server (if applicable)",
+            "cidrAddress": "203.0.113.101/32"
+        }
+    ],
+    "note": "Replace all placeholder IPs with actual datacenter and server room egress IPs. Include the Entra Connect sync server IP for CA013. Mark as trusted to allow directory sync operations."
+}
