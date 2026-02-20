@@ -1,0 +1,42 @@
+{
+    "displayName": "CA019: Restrict External/Guest Access",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeGuestsOrExternalUsers": {
+                "guestOrExternalUserTypes": "b2bCollaborationGuest,b2bCollaborationMember,b2bDirectConnectUser,otherExternalUser",
+                "externalTenants": {
+                    "membershipKind": "all"
+                }
+            },
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ],
+            "excludeApplications": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "clientAppTypes": [
+            "browser",
+            "mobileAppsAndDesktopClients"
+        ]
+    },
+    "grantControls": {
+        "operator": "AND",
+        "builtInControls": [
+            "mfa"
+        ]
+    },
+    "sessionControls": {
+        "signInFrequency": {
+            "value": 4,
+            "type": "hours",
+            "isEnabled": true
+        }
+    }
+}
