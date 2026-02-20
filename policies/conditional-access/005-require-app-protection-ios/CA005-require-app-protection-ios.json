@@ -1,0 +1,35 @@
+{
+    "displayName": "CA005: Require App Protection Policy \u2014 iOS/iPadOS",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "platforms": {
+            "includePlatforms": [
+                "iOS"
+            ]
+        },
+        "clientAppTypes": [
+            "browser",
+            "mobileAppsAndDesktopClients"
+        ]
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "approvedApplication",
+            "compliantApplication"
+        ]
+    }
+}
