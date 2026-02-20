@@ -1,0 +1,32 @@
+{
+    "displayName": "MAM004: iOS App Configuration \u2014 Outlook",
+    "description": "App configuration policy for Microsoft Outlook on iOS/iPadOS. Configures Outlook settings for managed app deployment.",
+    "platform": "iOS",
+    "targetApp": "com.microsoft.Office.Outlook",
+    "assignments": {
+        "includeGroups": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ],
+        "excludeGroups": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ]
+    },
+    "configurationSettings": {
+        "com.microsoft.outlook.Mail.FocusedInbox": true,
+        "com.microsoft.outlook.Mail.DefaultSignatureEnabled": false,
+        "com.microsoft.outlook.Mail.ExternalRecipientToolTipEnabled": true,
+        "com.microsoft.outlook.Mail.BlockExternalImages": true,
+        "com.microsoft.outlook.Calendar.DefaultReminderTime": "00:15:00",
+        "com.microsoft.outlook.Calendar.WeekStartDay": 1,
+        "com.microsoft.outlook.Contacts.SyncEnabled": false,
+        "com.microsoft.outlook.Settings.OpenLinksInEdge": true,
+        "com.microsoft.outlook.Settings.DefaultBrowser": "com.microsoft.msedge",
+        "com.microsoft.outlook.Settings.SaveContactsEnabled": false,
+        "com.microsoft.intune.mam.manageableBrowser": "com.microsoft.msedge",
+        "com.microsoft.outlook.Settings.Threads.OrganizeByThread": true
+    },
+    "accountSetup": {
+        "allowOnlyManagedAccounts": true,
+        "allowPersonalAccounts": false
+    }
+}
