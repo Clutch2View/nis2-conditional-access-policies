@@ -1,0 +1,29 @@
+{
+    "displayName": "CA014: Require Terms of Use",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "clientAppTypes": [
+            "browser",
+            "mobileAppsAndDesktopClients"
+        ]
+    },
+    "grantControls": {
+        "operator": "OR",
+        "termsOfUse": [
+            "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        ]
+    }
+}
