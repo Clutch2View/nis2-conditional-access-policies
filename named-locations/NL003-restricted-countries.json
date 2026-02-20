@@ -1,0 +1,17 @@
+{
+    "displayName": "NL003: Restricted Countries",
+    "locationType": "countryNamedLocation",
+    "isTrusted": false,
+    "countriesAndRegions": [
+        "KP",
+        "IR",
+        "SY",
+        "CU",
+        "RU",
+        "BY",
+        "CN",
+        "VE"
+    ],
+    "countryLookupMethod": "clientIpAddress",
+    "note": "Customize this list based on your organization's risk assessment and business operations. These are example restricted countries. Use ISO 3166-1 alpha-2 country codes. Referenced by CA021."
+}
