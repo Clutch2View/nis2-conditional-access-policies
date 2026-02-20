@@ -1,0 +1,29 @@
+{
+    "displayName": "CA022: Restrict Access for Insider Risk Users",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "All"
+            ]
+        },
+        "insiderRiskLevels": "elevated",
+        "clientAppTypes": [
+            "all"
+        ]
+    },
+    "sessionControls": {
+        "applicationEnforcedRestrictions": {
+            "isEnabled": true
+        },
+        "disableResilienceDefaults": false
+    }
+}
