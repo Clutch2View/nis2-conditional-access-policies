@@ -1,0 +1,32 @@
+{
+    "displayName": "CA018: Require Token Protection (Token Binding)",
+    "state": "enabledForReportingButNotEnforced",
+    "conditions": {
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeGroups": [
+                "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            ]
+        },
+        "applications": {
+            "includeApplications": [
+                "Office365"
+            ]
+        },
+        "clientAppTypes": [
+            "browser"
+        ],
+        "platforms": {
+            "includePlatforms": [
+                "windows"
+            ]
+        }
+    },
+    "sessionControls": {
+        "secureSignInSession": {
+            "isEnabled": true
+        }
+    }
+}
